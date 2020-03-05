@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="app.css">
+    <title>SSHS:25th Anniversary</title>
+  </head>
+  <body>
+    <h1 class="header text-center py-4">Sri Suryodhaya High School</h1>
+    <h4 class="text-center">25<sup>th</sup> Anniversary Contribution</h4>    
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+        <div id="total" class="mr-md-3 pt-3 px-3 text-center text-white overflow-hidden">
+            <!-- <img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSBs1Su8OjZYPZbepAwEFFELmEZmoayVm5CGDKs7MJJXya7656a1GGxzXf95KSzJWKbd9V5NPCn7PjK/pubchart?oid=1269942452&format=image" alt="Total Amount"> -->
+        </div>
+        <div id="holders" class="mr-md-3 pt-3 px-3 text-center overflow-hidden">
+            <!-- <img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSBs1Su8OjZYPZbepAwEFFELmEZmoayVm5CGDKs7MJJXya7656a1GGxzXf95KSzJWKbd9V5NPCn7PjK/pubchart?oid=114658685&format=image" alt="Given To"> -->
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"  crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            const _total = $('#total'),
+                  _holder = $('#holders');
+            const getImage = (id,name) => {
+                const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSBs1Su8OjZYPZbepAwEFFELmEZmoayVm5CGDKs7MJJXya7656a1GGxzXf95KSzJWKbd9V5NPCn7PjK/pubchart"; 
+                let image = document.createElement('img');
+                image.src = url + '?oid=' + id + '&format=image';
+                image.alt = name;
+                return image;
+            }
+            let totalImage = getImage('1269942452', 'Total');
+            _total.append(totalImage);
+            let holders = getImage('114658685', 'Taken');
+            _holder.append(holders);
+        })
+    </script>    
+  </body>
+</html>

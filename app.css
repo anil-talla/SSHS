@@ -1,0 +1,10 @@
+body{
+    font-family: Tahoma;
+}
+.header{
+    background: #3c2a1e;
+    color: #e9dbd2;
+}
+.flex-md-equal > *{
+    flex: 1;
+}
