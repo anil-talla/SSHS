@@ -20,6 +20,9 @@
         </div>
         <div id="holders" class="mr-md-3 pt-3 px-3 text-center overflow-hidden">
         </div>      
+    </div>
+    
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
         <div id="persons" class="mr-md-3 pt-3 px-3 text-center overflow-hidden">
         </div>
     </div>
@@ -27,7 +30,8 @@
     <script>
         $(document).ready(function(){
             const _total = $('#total'),
-                  _holder = $('#holders');
+                  _holder = $('#holders'),
+                  _persons = $('#persons');
             const getImage = (id,name) => {
                 const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSBs1Su8OjZYPZbepAwEFFELmEZmoayVm5CGDKs7MJJXya7656a1GGxzXf95KSzJWKbd9V5NPCn7PjK/pubchart"; 
                 let image = document.createElement('img');
@@ -40,8 +44,7 @@
             let holders = getImage('114658685', 'Taken');
             _holder.append(holders);          
             let persons = getImage('1328156973', 'Persons');
-            _holder.append(persons);
-          
+            _persons.append(persons);          
         })
     </script>    
   </body>
